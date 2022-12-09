@@ -127,15 +127,16 @@ print(f'the sorted list is {new_list}')
 
 # ex.3 random number to guess
 import random
+
 secret_number = int(input('choose a number '))
 guest_number = random.randint(1, 100)
 while guest_number != secret_number:
     if guest_number > secret_number:
-      print(f'secret number {secret_number} is less than the number {guest_number}')
-      break
+        print(f'secret number {secret_number} is less than the number {guest_number}')
+        break
     else:
-      print(f'secret number {secret_number} is grater than the number {guest_number}')
-      break
+        print(f'secret number {secret_number} is grater than the number {guest_number}')
+        break
 else:
     print(f'secret number {secret_number} is equal with the number {guest_number}')
 
@@ -144,19 +145,19 @@ pyramid = int(input('choose a number '))
 i = 1
 j = 0
 while i < pyramid:
-    while (j<=i-1):
+    while j <= i - 1:
         print(pyramid, end="")
         j += 1
         print("\r")
         j = 0
-        i +=1
+        i += 1
         break
 # ex.5 phone keyboard print 2d
 phone_keyboard = [
-  [1, 2, 3],
-  [4, 5, 6],
-  [7, 8, 9]
-  [0]
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+    [0]
 ]
 row2 = phone_keyboard[0]
 print(phone_keyboard[0][1])

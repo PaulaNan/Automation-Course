@@ -3,12 +3,17 @@ def say_hi():
 
 
 say_hi()
-# name = parameter = variabila neinitializata
-def say_hi_user(name, surname):
-    print(f'hello {name} {surname}')
+
+
+# name = parameter = uninitialized variable
+
+def say_hi_user(my_name, surname):
+    print(f'hello {my_name} {surname}')
+
 
 # Ioana = argument
 say_hi_user('Ioana', 'M')
+
 
 # input 3 numbers
 # output = set
@@ -19,6 +24,7 @@ def make_set(n1, n2, n3):
     r.add(n3)
     return r
 
+
 print(make_set(1, 2, 3))
 print(make_set(1, 2, 2))
 set1 = make_set(1, 2, 3)
@@ -26,17 +32,19 @@ set2 = make_set(1, 2, 2)
 print(set1.intersection(set2))
 print(make_set(1, 2, 3).intersection(make_set(2, 3, 3)))
 
+
 # return without param
 def pi_value():
     return 3.14
 
+
 x = pi_value() + 4
 print(x)
 
-
 # how to use functions from other file
-from folder.helpers import sums # import only sums
-print(sums(3, 4)) # * import all
+from folder.helpers import sums  # import only sums
+
+print(sums(3, 4))  # * import all
 
 # practice
 # tax calculator as cmc
@@ -45,7 +53,7 @@ tax = None
 
 
 def tax_calculator(cc_input, hybrid_input):
-    if hybrid_input == True:
+    if hybrid_input:
         return 10
     else:
         if cc_input < 1000:
@@ -55,13 +63,13 @@ def tax_calculator(cc_input, hybrid_input):
         else:
             return 900
 
-tax = tax_calculator(cc, False)
-print(tax) # cc = 49 - 70
-tax = tax_calculator(2400, False)
-print(tax) # 900
-tax = tax_calculator(2400, True)
-print(tax) # 10
 
+tax = tax_calculator(cc, False)
+print(tax)  # cc = 49 - 70
+tax = tax_calculator(2400, False)
+print(tax)  # 900
+tax = tax_calculator(2400, True)
+print(tax)  # 10
 
 # gas under 15% warning return % gas remaining
 CANISTER = 50
@@ -93,10 +101,10 @@ except_boys = ['Mihnea', 'Mircea', 'Horia']
 
 
 def name_type(name_input):
-        if name_input[len(name_input)-1] != 'a' and name_input in except_boys:
-            return 'it is a boy'
-        else:
-            return 'it is a girl'
+    if name_input[len(name_input) - 1] != 'a' and name_input in except_boys:
+        return 'it is a boy'
+    else:
+        return 'it is a girl'
 
 
 print(name_type(name))

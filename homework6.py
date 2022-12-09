@@ -1,4 +1,4 @@
-# ex.1 class circle, radius and color are atributes, methods: description, area, diameter, circumference
+# ex.1 class circle, radius and color are attributes, methods: description, area, diameter, circumference
 class Circle:
     radius = 10
     color = 'blue'
@@ -23,33 +23,33 @@ class Circle:
         print(f'the circumference is {circum}')
 
 
-cercle_info = Circle(10, 'blue')
-cercle_info.description()
-print(cercle_info.circle_area())
-cercle_info.diameter()
-cercle_info.circumference()
+circle_info = Circle()
+circle_info.description()
+print(circle_info.circle_area())
+circle_info.diameter()
+circle_info.circumference()
 
 
-# ex.2 class right angle, atributes: lenght, width, color, methods: description, area, petrimeter, change color
-class RightAngle():
-    lenght = 10
+# ex.2 class right angle, attributes: length, width, color, methods: description, area, perimeter, change color
+class RightAngle:
+    length = 10
     width = 5
     color = 'red'
 
-    def _init_(self, lenght, width, color):
-        self.lenght = lenght
+    def _init_(self, length, width, color):
+        self.length = length
         self.width = width
         self.color = color
 
     def description(self):
-        print(f'the lenght is {self.lenght}, the color is {self.color}, and the widht is {self.width}')
+        print(f'the length is {self.length}, the color is {self.color}, and the width is {self.width}')
 
     def angle_area(self):
-        area = self.width * self.lenght
+        area = self.width * self.length
         print(f'area is {area}')
 
     def perimeter(self):
-        angle_perimeter = self.width * 2 + self.lenght * 2
+        angle_perimeter = self.width * 2 + self.length * 2
         print(f'the perimeter is {angle_perimeter}')
 
     def change_color(self):
@@ -57,7 +57,7 @@ class RightAngle():
         self.color = new_color
 
 
-angle = RightAngle(10, 5, 'red')
+angle = RightAngle()
 angle.description()
 angle.angle_area()
 angle.perimeter()
@@ -65,7 +65,8 @@ angle.change_color()
 angle.description()
 
 
-# ex.3 class employee, atributes:name, surname, salary, methods: description, full name, monthly salary, anual salary, raise salary %
+# ex.3 class employee, attributes: name, last name, salary, methods: description, full name, monthly salary,
+# annual salary, raise salary %
 class Employee:
     def _init_(self, name, last_name, salary):
         self.name = name
@@ -82,8 +83,8 @@ class Employee:
     def salary(self):
         print(f'monthly salary is {self.salary}')
 
-    def anual_salary(self):
-        print(f'anual salary is {self.salary * 12}')
+    def annual_salary(self):
+        print(f'annual salary is {self.salary * 12}')
 
     def raise_salary(self, percent):
         self.percent = percent
@@ -94,50 +95,12 @@ employee1 = Employee('Popescu', 'Maria', 1500)
 employee1.describe()
 employee1.full_name()
 employee1.salary()
-employee1.anual_salary()
+employee1.annual_salary()
 employee1.raise_salary(10)
-#
-#
-# class Employee():
-#     name = None
-#     surname = None
-#     salary = None
-#
-#     def _init_(self, name, surname, salary):
-#         self.name = name
-#         self.surname = surname
-#         self.salary = salary
-#
-#     def description(self):
-#         print(f'the name is {self.name}, surname {self.surname}, and salary is {self.salary}')
-#
-#     def full_name(self):
-#         print(f'full name is {self.name} {self.surname}')
-#
-#     def monthly_salary(self):
-#         print(f'salary is {self.salary}')
-#
-#     def anual_salary(self):
-#         year_salary = self.salary * 12
-#         print(f'anual salary is {year_salary}')
-#
-#     def raise_salary(self):
-#         percent = self.salary * 10 / 100
-#         new_salary = self.salary + percent
-#         print(f'the raise is {percent}')
-#         print(f'new salary is {new_salary}')
-#
-#
-# empl = Employee('Popescu', 'Marcel', 1500)
-# empl.description()
-# empl.full_name()
-# empl.monthly_salary()
-# empl.anual_salary()
-# empl.raise_salary()
 
 
-# ex.4 class account, atribute:iban, owner, balance, methods show balance, debit account, credit account
-class Account():
+# ex.4 class account, attribute:iban, owner, balance, methods show balance, debit account, credit account
+class Account:
     iban = None
     owner = None
     balance = 0
@@ -161,23 +124,25 @@ class Account():
 #   def debit_account(self):
 #     debit = int(input('how much do you want to withdrawal? '))
 #     if debit < self.balance:
-#       print(f'insuficinet founds, you have {self.balance} ')
+#       print(f'Insufficient founds, you have {self.balance} ')
 #     else:
 #       self.balance = new_balance - debit
-#     print(f'you withdrawal {debit}, you now have {self.balance}')
+#     print(f'You withdrawal {debit}, you now have {self.balance}')
 
 # bank = Account('ro12345', 'Popescu Ion', 0)
 # bank.show_balance()
 # bank.credit_account()
 # bank.debit_account()
 
-# ex.1 class Bill, atributes: SERIES, number, name product, quantity, price/buc, methods: change quantity, change price, change name product, generate bill
+# ex.1 class Bill, attributes: SERIES, number, name product, quantity, price/buc, methods: change quantity,
+# change price, change name product, generate bill
+
 from datetime import date
 
 today = date.today()
 
 
-class Bill():
+class Bill:
     SERIES = 'ABC'
     number = 1
     product_name = None
@@ -191,7 +156,7 @@ class Bill():
         self.price = price
 
     def change_quantity(self):
-        print(f' quantity is {self.quantity}')
+        print(f'Quantity is {self.quantity}')
 
     # def change_price(self):
 
@@ -200,13 +165,14 @@ class Bill():
     # def generate_bill(bill):
 
 
-bill_generator = Bill(1, ' ball', 2, 55 )
+bill_generator = Bill(1, ' ball', 2, 55)
 bill_generator.change_quantity()
 print(f'date: ', today)
 
 
-# ex.2 class car, atributes: brand, model, max_speed, current_speed, color, available_colors, enrolled, constructor: model, max_speed, methods: description, enrolled, paint, accelerate, brake
-class Car():
+# ex.2 class car, attributes: brand, model, max_speed, current_speed, color, available_colors, enrolled, constructor:
+# model, max_speed, methods: description, enrolled, paint, accelerate, brake
+class Car:
     color = 'grey'
     current_speed = 0
     available_colors = {'red', 'blue', 'white', 'orange', 'green', 'black'}
@@ -251,3 +217,30 @@ new_car.accelerate(130)
 new_car.description()
 new_car.brake()
 
+
+# ex.3 class todolist, atributes: todo (dict, key=name of task, value=description), methods add task(name, descrition), end task(name), show to do list(keys), show info(name task)
+# class ToDoList():
+#     todo = {}
+#
+#     def add_task(self, name, description):
+#         print(f'you added a new task: {name}, {description}')
+#
+#     def end_task(self, name):
+#
+#         print(f'you remove {name} from list')
+#
+#     def show_todo_list(self):
+#         print('keys')
+#
+#     def information(self, name):
+#         if name != todo:
+#             input('do you want to safe in to do list? ')
+#             if True:
+#
+#     else:
+#         name == todo:
+#         input(f'give me more details')
+#
+#
+# list = ToDoList()
+# list.add_task('learn', 'english')

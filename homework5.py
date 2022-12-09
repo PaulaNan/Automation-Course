@@ -14,11 +14,10 @@ print(f'sum is {print_numbers(2, 2)}')
 
 def type_numbers(number1):
     if number1 % 2 == 0:
-        return (f'the number {number1} is even')
-        print(f'the number {number1} is even')
+        return f'The number {number1} is even'
+
     else:
-        return (f'the number {number1} is odd')
-        print(f'the number {number1} is odd')
+        return f'The number {number1} is odd'
 
 
 print(type_numbers(3))
@@ -30,7 +29,7 @@ def name(name):
     return len(name)
 
 
-print(f'the lenght of name is',  name('paula'))
+print(f'The length of name is',  name('paula'))
 
 # ex.4 function that returns rectangle area
 
@@ -50,7 +49,7 @@ def circle_area(radius, PI):
     return the_area
 
 
-print(f'the cercle area is', circle_area(4, PI))
+print(f'the circle area is', circle_area(4, PI))
 
 # ex.6 function that return True if a character is in a str
 # def notes(string):
@@ -58,7 +57,7 @@ print(f'the cercle area is', circle_area(4, PI))
 #     return True
 #   else:
 #     return False
-# notes('maine mergem la munte')
+# notes('We go to the mountains tomorrow')
 # ex.7 function without return. receive a string and print nr of characters lower case is, and upper case is
 
 # ex.8 function that receive a list of numbers and returns  a list with positive numbers------------
@@ -73,8 +72,6 @@ def positive_numbers(num1, num2, num3, num4):
 print(f'positive numbers are', positive_numbers(4, 5, -1, 2))
 
 # ex.9 function that returns nothing. Receive 2 numbers and print: first is larger than second, the second is larger than first, numbers are equals
-
-
 def comparison(num1, num2):
     if num1 > num2:
         print(f'the number {num1} is larger than number {num2}')
@@ -134,21 +131,17 @@ def calculator(a, b):
     multiplication = a * b
     division = a / b
     return sum_num
-    print(sum_num)
     return difference
-    print(difference)
     return multiplication
-    print(multiplication)
     return division
-    print(multiplication)
 
 print(' the sum is')
 print(calculator(10, 2))
 
-# ex.3 function that receive a list 0-9, return dict - how many times apears every number
+# ex.3 function that receive a list 0-9, return dict - how many times appears every number
 
-def list_dict(dict):
-    dict = {
+def list_dict(dictionary):
+    dictionary = {
         0: 0,
         1: 2,
         2: 0,
@@ -173,7 +166,7 @@ def max_value(num1, num2, num3):
 print(' max value is')
 print(max_value(3, 5, 9))
 
-# ex.5 function that receive a number and retuns the sum of all numbers between 0 and that number---------------------
+# ex.5 function that receive a number and returns the sum of all numbers between 0 and that number---------------------
 # def sum_all_numbers(num):
 #     if num == 0:
 #         return 0
@@ -196,7 +189,7 @@ def discount(price):
     return new_price
 
 
-print(f'the price after the discount is')
+print(f'The price after the discount is')
 print(discount(100))
 
 # ex.3 function that shows date and time for ro and china
@@ -212,7 +205,7 @@ def date_time():
     print("The current time in China is :", current_time_china)
 
 
-print('the time in Romania is', date_time())
+print('The time in Romania is', date_time())
 
 
 

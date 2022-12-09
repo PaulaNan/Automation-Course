@@ -4,14 +4,14 @@
 #   print(number)
 #   number2 = 10/number
 # except Exception as e: # Exception = any exception (e= keeps the message)
-#   print(f'error: {e}')
+#   print(f'Error: {e}')
 # print('code is passing')
 
 # try:
 #   list = [1, 2, 3]
 #   list[6]
 # except IndexError as e:
-#   print(f'error: {e}')
+#   print(f'Error: {e}')
 
 # # force an exception (if....raise)
 # raise IndexError('the limit of students in classroom is 30')
@@ -31,7 +31,7 @@ class Chef2:
     short = 2
 
 
-class JappaneseChef(Chef):  # child class
+class JapaneseChef(Chef):  # child class
     def make_sushi(self):
         print('sushi')
 
@@ -43,7 +43,7 @@ class ItalianChef(Chef, Chef2):
         print('pizza')
 
 
-nakamoto = JappaneseChef()  # initialize objects type japanese chef
+nakamoto = JapaneseChef()  # initialize objects type japanese chef
 newbe = Chef()
 newbe.make_fries
 nakamoto.make_salad
@@ -58,9 +58,9 @@ mario.plate
 mario.short
 
 
-# polymorphism - 2 function with the same name, but different behavior dependinf on input
-# polimorfismul este situatia cand exista mai multe functii cu aceleasi nume si in functie de input va sti care sa se apeleze
-# poli class method
+# polymorphism - 2 function with the same name, but different behavior depending on input
+# polymorphism este situatia cand exista mai multe functii cu aceleasi nume si in functie de input va sti care sa se apeleze
+# polymorphism with class method
 class Romania:
     def language(self):
         print('romanian')
@@ -77,7 +77,7 @@ for country in (obj_ro, obj_usa):
     country.language()
 
 
-# poli with enheritange
+# polymorphism with inheritance
 class Bird:
     def description(self):
         print('i am a bird')
@@ -92,7 +92,7 @@ class Parrot(Bird):
 
 
 class Penguin(Bird):
-    def fly(self):  # in poly when are 2 function with same naqme it is uses the right one
+    def fly(self):  # in poly when are 2 function with same name it is uses the right one
         print('i actually can not fly, but it is ok, i am dressed stylish')
 
 
@@ -163,7 +163,7 @@ class Car(ABC):
     @abstractmethod  # decorator
     def accelerate(self):  # abstract method
         pass
-        # or raise NotImplementedError (fortam o exceptie)
+        # or raise NotImplementedError (force an exception)
 
     # interfata are toate metodele abstracte clasa abstracta are si metode abstracte si metode clasice
     @classmethod  # metoda ce tine de clasa asta metoda clasica
@@ -175,7 +175,7 @@ class Ferrari(Car):
     def accelerate(self):
         print('i am accelerating from 0 to 100 in 3 sec')
 
-    def stop(self):  # overwhrite
+    def stop(self):  # overwrite
         print('i am a ferrari, i can not stop')
 
 
@@ -195,7 +195,7 @@ l.stop()
 
 # interfata are toate metodele abstracte obliga toate clasele mostenitoare sa foloseasca metodele
 
-# encapsulation - atributes will be hidden by __ : get, set, delete, hide
+# encapsulation - attributes will be hidden by __ : get, set, delete, hide
 class Car:
     __color = 'grey'
 
@@ -226,7 +226,6 @@ print(volvo.get_color())
 # tema
 
 
-
 # property - label - obliga sa se conporte ca o propietate. daca atributul e color, metodele sunt tot color. pe getter trebuie return
 class CarPy:
     def _init_(self, color):
@@ -253,16 +252,18 @@ class CarPy:
         print(f'deleter: i delete the color')
         self.__color = None
 
+
 car2 = CarPy('grey')
-car2.color = 'red' # set color
-car2.color # get color
-del car2.color # del color
-car2.color # get color
+car2.color = 'red'  # set color
+car2.color  # get color
+del car2.color  # del color
+car2.color  # get color
 print('-------------------')
 car3 = CarPy('white')
-car3.color # getter
-car3.color = 'black' # set color
+car3.color  # getter
+car3.color = 'black'  # set color
 car3.color
 del car3.color
 car3.color
-# propietatea e ca decorator/field si avem acces la decoratorii de getter, setter, deleter care trebuie implementate metode care fac exact asta: get, set, delete
+# propietatea e ca decorator/field si avem acces la decoratorii de getter, setter, deleter care trebuie implementate
+# metode care fac exact asta: get, set, delete

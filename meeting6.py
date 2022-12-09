@@ -1,10 +1,9 @@
 class Car:
-    # fields/ atribute
+    # fields/ attribute
     make = 'Dacia'
     model = None
     year = 2022
     color = None
-
 
     # constructor
     def __init__(self, model, color):
@@ -75,6 +74,7 @@ class Nerfgun:
         self.safety_on = True
         print('the safety is on')
 
+
 # objects/ call the methods
 nerf1 = Nerfgun('glock', 'red')
 nerf2 = Nerfgun('glock3', 'pink')
@@ -97,18 +97,19 @@ nerf2.description()
 
 import random
 
+
 class Dog:
-    def __init__(self, name, breed, color): # all are none
+    def __init__(self, name, breed, color):  # all are none
         self.name = name
         self.breed = breed
         self.color = color
         self.age = 1
 
     def description(self):
-            print(f'name {self.name}')
-            print(f'color {self.color}')
-            print(f'breed {self.breed}')
-            print(f'dog age {self.dog_age()}')
+        print(f'name {self.name}')
+        print(f'color {self.color}')
+        print(f'breed {self.breed}')
+        print(f'dog age {self.dog_age()}')
 
     def dog_age(self):
         return self.age * 7

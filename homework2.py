@@ -14,7 +14,7 @@ if -2 <= x <= 13:
 else:
     print(f'{x} is not between -2 and 13')
 
-#verify if the difference between x and y is less than 5
+# verify if the difference between x and y is less than 5
 y = int(input('choose another number '))
 z = x - y
 if z < 5:
@@ -23,7 +23,7 @@ else:
     print(f'the difference between {x} and {y} is grater than 5')
 
 # verify if x is not between 5 and 27
-if not(5 > x < 27):
+if not (5 > x < 27):
     print(f'x is between 5 and 27')
 else:
     print(f'x is not between 5 and 27')
@@ -54,10 +54,10 @@ elif letter.lower() in ('a', 'e', 'i', 'o', 'u'):
 else:
     print(f'{letter} is a consonant')
 
-# transform grades rto romanian sistem
+# transform grades to romanian system
 nota = float(input('enter your grade: '))
-if nota > 10 or nota <1:
-  print('the grade is invalid, try again')
+if nota > 10 or nota < 1:
+    print('the grade is invalid, try again')
 if nota >= 9:
     print('you took an A')
 elif nota >= 8:
@@ -97,7 +97,7 @@ print(string[:5], string[-5:])
 # type a str and check if fist and last characters are the same
 string2 = str(input('write something ')).lower()
 assert string2[0] == string2[-1]
-print('primul si ultimul sunt la fel')
+print('The first and the last are the same')
 
 # given the str, show the even and odd numbers-------------------
 # number_str = '0123456789'
@@ -106,23 +106,23 @@ print('primul si ultimul sunt la fel')
 # if par == 0:
 #   print(f"the number {number_str[]} is even")
 # else:
-#   print(f'the number {number_str[]} is odd')
+#   print(f'The number {number_str[]} is odd')
 
 # generate a random number to play roll dice
 import random
+
 choose = int(input('choose a number '))
 dice_roll = random.randint(1, 6)
 if choose == dice_roll:
-  print(f'you win. you choose {choose}, and it was {dice_roll}')
+    print(f'you win. you choose {choose}, and it was {dice_roll}')
 else:
-  print(f'you loose. you choose {choose}, but it was {dice_roll}')
-
+    print(f'you loose. you choose {choose}, but it was {dice_roll}')
 
 # verify if the angles of triables are valid sum between them = 180--------
 x = int(input('choose first angle= '))
 y = int(input('choose second anglei= '))
 z = int(input('choose third angle= '))
-if 0<x<179 and 0<y<179 and 0<z<179:
-  print('the triangle is valid')
+if 0 < x < 179 and 0 < y < 179 and 0 < z < 179:
+    print('the triangle is valid')
 else:
-  print('the triangle is not valid')
+    print('the triangle is not valid')

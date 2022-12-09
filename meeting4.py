@@ -1,18 +1,18 @@
 # while/ else
 i = 0
-while i <=3:
+while i <= 3:
     print(i)
     i += 1
-else: # optional, only one time at the end of the loop
+else:  # optional, only one time at the end of the loop
     print(' out of the loop, i >3')
 
 # for/ else - takes the index
-for j in range(20, 41, 2): # from where, until where, last character is not shown
+for j in range(20, 41, 2):  # from where, until where, last character is not shown
     print(j)
 else:
     print(f'at the end j is {j}')
 
-for j in range(40, 21, -2): # from where, until where, last character is not shown
+for j in range(40, 21, -2):  # from where, until where, last character is not shown
     print(j)
 else:
     print(f'at the end j is {j}')
@@ -29,22 +29,22 @@ for color in colors:
     if color == 'purple':
         print(color)
         index = colors.index('purple')
-        colors[index] = 'magenta' # over wright
+        colors[index] = 'magenta'  # over wright
 print(f'colors are {colors}')
 
 grades = [3, 5, 8, 10]
-sum = 0
+the_sum = 0
 for grade in grades:
     print(type(grade))
-    sum = sum + grade
+    the_sum = the_sum + grade
 else:
-    average = sum / len(grades)
+    average = the_sum / len(grades)
     print(f'the average is {average}')
 
 # break - getting out of for
 for i in range(100):
     if i == 7:
-        break # when we look a value on a list
+        break  # when we look a value on a list
     print(i)
 print('continue with the folder')
 
@@ -55,8 +55,8 @@ for i in range(0, 20):
         continue
     print(f'i is {i}')
 
-#practice
-#speed up until gas is out
+# practice
+# speed up until gas is out
 gas = 9
 used = 1
 while gas > 0:
@@ -70,7 +70,7 @@ else:
 # print positive numbers
 numbers = [-2, 4, 6, -5, 0, 12]
 numbers1 = []
-for number in numbers: # each
+for number in numbers:  # each
     if number > 0:
         print(number)
         numbers1.append(number)
@@ -78,7 +78,7 @@ print(numbers1)
 
 for number in numbers:
     if number <= 0:
-        continue # skip
+        continue  # skip
     print(number)
 
 # for each in dict
@@ -97,7 +97,5 @@ for student, grade in grades.items():
     if grade == 7:
         counter += 1
 print(counter)
-#holypython.com
-#list python exercises
-
-
+# holypython.com
+# list python exercises
