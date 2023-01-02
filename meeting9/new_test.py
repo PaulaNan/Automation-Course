@@ -16,7 +16,7 @@ chrome = webdriver.Chrome(service=s)
 chrome.maximize_window()
 
 
-class Test(unittest.TestCase):
+class Test2(unittest.TestCase):
     # write one time the elem from a page
     CONTACT_US = (By.XPATH, '//a[text()="Contact us"]')
     SUBMIT_BUTTON = (By.XPATH, '//input[@id="submitMessage"]')
